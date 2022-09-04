@@ -97,6 +97,8 @@ border-bottom: 1px solid var(--border-color);
 /* navigation */
 .site-nav a {
   color: var(--title-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav a:hover,
 .site-nav a:focus {
@@ -168,6 +170,7 @@ border-bottom: 1px solid var(--border-color);
 .header-contacts a:focus {
   color: var(--accent-color);
 }
+
 .header-contacts {
   display: flex;
   font-weight: 500;
@@ -241,7 +244,7 @@ border-bottom: 1px solid var(--border-color);
   margin: 0 auto;
   border: none;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn:focus {
   background-color: var(--btn-focus-hover);
@@ -421,6 +424,8 @@ border-radius: 0px 0px 4px 4px;
   fill: currentColor;
   height: 100%;
   width: 100%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icon{
   width: 20px;
@@ -460,6 +465,8 @@ border-radius: 0px 0px 4px 4px;
   fill: currentColor;
   height: 100%;
   width: 100%;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover,
@@ -491,11 +498,15 @@ align-items: baseline;
 
 .address {
   color: var(--light-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-mail,
 .footer-phone {
   color: var(--phone-footer-color);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address:hover,
 .address:focus {
@@ -506,7 +517,7 @@ align-items: baseline;
   color: var(--accent-color);
 }
 .footer-phone:hover,
-.footer-mail:focus {
+.footer-phone:focus {
   color: var(--accent-color);
 }
 
@@ -530,7 +541,9 @@ align-items: baseline;
 
 .social-list-link.footer{
   fill: var(--light-text-color);
-  background-color: var(--footer-social-bg-color) 
+  background-color: var(--footer-social-bg-color);
+  
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
 .social-list-link.footer:hover,
@@ -605,22 +618,21 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
   display: block;
   border: none;
   border-radius: 4px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-btns .item:not(:last-child) {
   margin-right: 8px;
 }
 
-.btn-portfolio:hover {
+.btn-portfolio:hover,
+.btn-portfolio:focus{
   background-color: var(--accent-color);
   color: var(--light-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.btn-portfolio:focus {
-  background-color: var(--accent-color);
-  color: var(--light-text-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
+
 .portfolio-titles {
   font-weight: 700;
   font-size: 18px;
@@ -645,6 +657,10 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
 
 .portfolio-list .item{
   flex-basis: calc((100% - 60px) / 3);
+}
+
+.portfolio-link{
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-link:hover,
@@ -696,6 +712,7 @@ transform: translateY(0%);
 fill: currentColor;
 margin-right: 10px;
 }
+
 .contacts-icon:hover,
 .contacts-icon:focus{
   fill: var(--accent-color);
